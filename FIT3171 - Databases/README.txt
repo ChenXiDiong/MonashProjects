@@ -1,0 +1,3 @@
+Assignment 1 is a group assignment worked in a group of 3. For the first part, we are to design a relational database according to the case study given, presented in the form of a conceptual diagram and a UML diagram. The second part requires us to build the logical database using Oracle.
+
+Assignment 2 is an individual assignment where we have to modify and populate a database, and then perform SQL queries to retrieve certain information from the database.
