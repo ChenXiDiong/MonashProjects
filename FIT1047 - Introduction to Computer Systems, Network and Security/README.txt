@@ -1,0 +1,3 @@
+Assignment 1 is split into two parts. For the first part, we have to solve logic calculation problems. For the second part, we are to solve problems by programming in MARIE, an assembly language.
+
+Assignment 2 is split into two parts as well. The first part is about researching WLAN networks. We are required to measure and analyse different APs within our households. The second part is for us to perform research on an incident regarding cybersecurity, report about our findings, and write an analysis regarding the problem.

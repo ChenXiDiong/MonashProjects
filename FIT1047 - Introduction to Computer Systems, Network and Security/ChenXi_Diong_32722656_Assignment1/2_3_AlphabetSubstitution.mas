@@ -1,0 +1,214 @@
+﻿/Main program
+inputname, 	JnS subInputNames   
+            Jump inputname   /continue looping until the name has finished inputting          
+storenextadd, 	Load myNameAdd
+				Add One  /moves to next address for input
+                Store myNameAdd
+                Jump inputname                       
+storenextline, 	Load myNameAdd
+				Add nextrow  /moves to next row for input
+				Store myNameAdd
+                Jump inputname
+                
+printfirstname, LoadI PrintNameAdd
+				Subt comma    /checks if the current character is a comma
+                Skipcond 800
+                Jump Loadcomma  
+                JnS subPrintString  /if not then print the character
+				Jump printfirstname
+Loadcomma, 	Load Spacebar  
+			Output    /print a space if it is a comma
+            Load PrintNameAdd
+			Add One   /move to the next address for printing
+            Store PrintNameAdd
+			Jump printlastname
+printlastname, 	LoadI PrintNameAdd
+				Subt fullstop  /checks if the current character is a full stop
+				Skipcond 800
+                Jump Loadfullstop
+                JnS subPrintString  /if not then print the character
+				Jump printlastname
+Loadfullstop, 	Load newline
+				Output   /print a new line if it is a full stop
+                Load PrintNameAdd
+				Add nextrow   /move to the next row of address for printing
+                Store PrintNameAdd
+                Jump checkifend
+checkifend, 	LoadI PrintNameAdd
+				Subt Endsign   /checks if the current character is a '$' sign
+				Skipcond 800
+            	Jump fnameswitch  
+				Jump printfirstname  /if not then print out the next name
+fnameswitch, 	LoadI SubstitutionAdd
+				Subt comma  /checks if the current character is a comma
+                Skipcond 800
+                Jump nextifcomma 
+			 	JnS subSubstitution  /if not, substitute the character
+                Jump fnameswitch
+nextifcomma, 	Load SubstitutionAdd
+				Add One
+                Store SubstitutionAdd /move to the next address for character substitution
+				Load comma
+				StoreI newNameAdd /store a comma in the new name address
+                Load newNameAdd
+				Add One
+                Store newNameAdd /move to the next address for storing the new name
+lnameswitch,	LoadI SubstitutionAdd
+				Subt fullstop  /checks if the current character is a full stop
+                Skipcond 800
+                Jump ifend
+			 	JnS subSubstitution  /if not, substitute the character
+                Jump lnameswitch
+ifend,	Load fullstop
+		StoreI newNameAdd  /stores a full stop in the new name address
+		Load SubstitutionAdd
+		Add nextrow  /move to the next row for character substitution
+        Store SubstitutionAdd
+        Load newNameAdd
+		Add nextrow  /move to the next row for storing the new name
+		Store newNameAdd
+		LoadI SubstitutionAdd
+		Subt Endsign
+		Skipcond 800
+        Jump printfname
+        Jump fnameswitch
+printfname, 	LoadI PrintNewNameAdd
+				Subt comma    /checks if the current character is a comma
+                Skipcond 800
+                Jump printcomma  
+                JnS subPrintNewString  /if not then print the character
+				Jump printfname
+printcomma, 	Load Spacebar  
+				Output    /print a space if it is a comma
+            	Load PrintNewNameAdd
+				Add One   /move to the next address for printing
+            	Store PrintNewNameAdd
+				Jump printlname
+printlname, 	LoadI PrintNewNameAdd
+				Subt fullstop  /checks if the current character is a full stop
+				Skipcond 800
+                Jump printfullstop
+                JnS subPrintNewString  /if not then print the character
+				Jump printlname
+printfullstop, 	Load newline
+				Output   /print a new line if it is a full stop
+                Load PrintNewNameAdd
+				Add nextrow   /move to the next row of address for printing
+                Store PrintNewNameAdd
+                Jump checkfinish
+checkfinish, 	LoadI PrintNewNameAdd
+				Subt Endsign   /checks if the current character is a '$' sign
+				Skipcond 800
+            	Jump End  
+				Jump printfname  /if not then print out the next name
+/Subroutine for input name
+subInputNames, 	Hex 0
+				Input    /receives user input
+				StoreI myNameAdd   /stores in the current name address
+                Subt Endsign   /checking if the current input is an '$' sign
+				Skipcond 800
+                Jump printfirstname    /if it is, move to the next subroutine
+                LoadI myNameAdd
+                Subt comma /checking if the current input is a comma
+                Skipcond 800
+                Jump storenextadd
+                LoadI myNameAdd
+                Subt fullstop /checking if the current input is a fullstop
+				Skipcond 800
+                Jump storenextline
+                Load myNameAdd  
+                Add One    /moves to the next address to store
+                Store myNameAdd
+                JumpI subInputNames
+                
+/Subroutine for printing original names
+subPrintString, Hex 0
+				LoadI PrintNameAdd
+                Output   /prints out the current character
+                Load PrintNameAdd
+				Add One  /moves to the next address for printing
+                Store PrintNameAdd
+                JumpI subPrintString
+               
+/Subroutine for substituting characters
+subSubstitution, 	HEX 0
+					Load oriadd
+                    Store mySubstKey1
+					LoadI SubstitutionAdd
+					subt a
+                    Add mySubstKey1
+                    Store mySubstKey1
+					LoadI mySubstKey1Addr
+					StoreI newNameAdd
+                    Load newNameAdd
+					Add One
+                    Store newNameAdd
+                    Load SubstitutionAdd
+					Add One
+                    Store SubstitutionAdd
+					JumpI subSubstitution
+                    
+/Subroutine for printing names after substitution
+subPrintNewString, 	Hex 0
+					LoadI PrintNewNameAdd
+                	Output   /prints out the current character
+                	Load PrintNewNameAdd
+					Add One  /moves to the next address for printing
+                	Store PrintNewNameAdd
+                	JumpI subPrintNewString
+
+End,	Load Endsign
+		Output  /prints out the '$' sign and ends the program
+		Halt
+
+mySubstKey1Addr, ADR mySubstKey1
+mySubstKey1, 	HEX 064 / a -> d
+				HEX 065 / b -> e
+				HEX 066 / c -> f
+				HEX 067 / d -> g
+				HEX 068 / e -> h
+				HEX 069 / f -> i
+				HEX 06A / g -> j
+				HEX 06B / h -> k
+				HEX 06C / i -> l
+				HEX 06D / j -> m
+				HEX 06E / k -> n
+				HEX 06F / l -> o
+				HEX 070 / m -> p
+				HEX 071 / n -> q
+				HEX 072 / o -> r
+				HEX 073 / p -> s
+				HEX 074 / q -> t
+				HEX 075 / r -> u
+				HEX 076 / s -> v
+				HEX 077 / t -> w
+				HEX 078 / u -> x
+				HEX 079 / v -> y
+				HEX 07A / w -> z
+				HEX 061 / x -> a
+				HEX 062 / y -> b
+				HEX 063 / z -> c
+myNameAdd, Hex 300
+PrintNameAdd, Hex 300
+SubstitutionAdd, Hex 300
+newNameAdd, Hex 600
+PrintNewNameAdd, Hex 600
+a, Hex 061
+oriadd, Hex 064
+One, Dec 1
+nextrow, Dec 5
+comma, Hex 2C
+fullstop, Hex 2E
+Endsign, Hex 24
+Spacebar, Hex 20              
+newline, Hex A
+
+
+                
+
+                
+
+                    
+
+
+

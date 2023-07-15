@@ -1,0 +1,181 @@
+﻿/Main program
+firstname, 	Load count
+			Skipcond 800  /If 5 characters are entered, count will be 0
+            Jump AddComma   /Adds a comma if first name is fully inputed
+            JnS subInputNames   /otherwise continue receiving input for first name
+            Load count  
+            Subt One    /after receiving an input, subtract 1 from the counter
+            Store count
+            Jump firstname   /continue looping until first name has finished inputting
+AddComma,	Load comma
+			StoreI myNameAdd  /Stores comma into current address
+			Load myNameAdd  
+			Add One   /moves to the next address to store 
+			Store myNameAdd
+			Load count
+			Add Five   /resets the counter after adding a comma
+			Store count
+lastname, 	Load count
+			Skipcond 800    /If 5 characters are entered, count will be 0
+            Jump AddFullstop   /Adds a full stop if last name is fully inputed
+            JnS subInputNames  /otherwise continue receiving input for last name
+            Load count
+            Subt One   /after receiving an input, subtract 1 from the counter
+            Store count
+            Jump lastname    /continue looping until last name has finished inputting
+AddFullstop, 	Load fullstop
+				StoreI myNameAdd
+				Load myNameAdd
+				Add nextrow   /changes the memory address to a new row
+				Store myNameAdd
+                Load count 
+				Add Five      /resets the counter after adding a comma
+				Store count
+                Jump firstname
+/Subroutine for input name
+subInputNames, 	Hex 0
+				Input    /receives user input
+				StoreI myNameAdd   /stores in the current name address
+                Subt Endsign   /checking if the current input is an '$' sign
+				Skipcond 800
+                Jump printfirstname    /if it is, move to the next subroutine
+                Load myNameAdd  
+                Add One    /moves to the next address to store
+                Store myNameAdd
+                JumpI subInputNames
+printfirstname, LoadI PrintNameAdd
+				Subt comma    /checks if the current character is a comma
+                Skipcond 800
+                Jump Loadcomma  
+                JnS subPrintString  /if not then print the character
+				Jump printfirstname
+Loadcomma, 	Load Spacebar  
+			Output    /print a space if it is a comma
+            Load PrintNameAdd
+			Add One   /move to the next address for printing
+            Store PrintNameAdd
+			Jump printlastname
+printlastname, 	LoadI PrintNameAdd
+				Subt fullstop  /checks if the current character is a full stop
+				Skipcond 800
+                Jump Loadfullstop
+                JnS subPrintString  /if not then print the character
+				Jump printlastname
+Loadfullstop, 	Load newline
+				Output   /print a new line if it is a full stop
+                Load PrintNameAdd
+				Add nextrow   /move to the next row of address for printing
+                Store PrintNameAdd
+                Jump checkifend
+checkifend, 	LoadI PrintNameAdd
+				Subt Endsign   /checks if the current character is a '$' sign
+				Skipcond 800
+            	Jump fnameswitch  
+				Jump printfirstname  /if not then print out the next name
+fnameswitch, 	LoadI SwitchCaseAdd
+				Subt comma  /checks if the current character is a comma
+                Skipcond 800
+                Jump nextifcomma 
+			 	JnS subChangecase  /if not, change the case of the character
+                Jump fnameswitch
+nextifcomma, 	Load SwitchCaseAdd
+				Add One /moves to the next address 
+                Store SwitchCaseAdd
+lnameswitch,	LoadI SwitchCaseAdd
+				Subt fullstop  /checks if the current character is a full stop
+                Skipcond 800
+                Jump ifend
+			 	JnS subChangecase  /if not, change the case of the character
+                Jump lnameswitch
+ifend,  Load SwitchCaseAdd
+		Add nextrow
+        Store SwitchCaseAdd
+		LoadI SwitchCaseAdd
+		Subt Endsign
+		Skipcond 800
+        Jump printfname
+        Jump fnameswitch
+printfname, 	LoadI PrintNewNameAdd
+				Subt comma    /checks if the current character is a comma
+                Skipcond 800
+                Jump printcomma  
+                JnS subPrintNewString  /if not then print the character
+				Jump printfname
+printcomma, 	Load Spacebar  
+				Output    /print a space if it is a comma
+            	Load PrintNewNameAdd
+				Add One   /move to the next address for printing
+            	Store PrintNewNameAdd
+				Jump printlname
+printlname, 	LoadI PrintNewNameAdd
+				Subt fullstop  /checks if the current character is a full stop
+				Skipcond 800
+                Jump printfullstop
+                JnS subPrintNewString  /if not then print the character
+				Jump printlname
+printfullstop, 	Load newline
+				Output   /print a new line if it is a full stop
+                Load PrintNewNameAdd
+				Add nextrow   /move to the next row of address for printing
+                Store PrintNewNameAdd
+                Jump checkfinish
+checkfinish, 	LoadI PrintNewNameAdd
+				Subt Endsign   /checks if the current character is a '$' sign
+				Skipcond 800
+            	Jump End  
+				Jump printfname  /if not then print out the next name
+                
+/Subroutine for printing original names
+subPrintString, Hex 0
+				LoadI PrintNameAdd
+                Output   /prints out the current character
+                Load PrintNameAdd
+				Add One  /moves to the next address for printing
+                Store PrintNameAdd
+                JumpI subPrintString
+                
+/Subroutine for printing names with cases switched
+subPrintNewString, 	Hex 0
+					LoadI PrintNewNameAdd
+                	Output   /prints out the current character
+                	Load PrintNewNameAdd
+					Add One  /moves to the next address for printing
+                	Store PrintNewNameAdd
+                	JumpI subPrintNewString
+                    
+/Subroutine for changing the cases of names
+subChangecase,  Hex 0
+				LoadI SwitchCaseAdd
+                Subt casecheck  /if the input is more than 5A, then it is a lowercase letter
+                Skipcond 000 
+                Subt forty /if the input is a lowercase letter
+                Add twenty
+                Add casecheck
+                /if the character is a lowercase letter, we have to subtract 20 from it to make it lowercase, otherwise add 20 to it.
+                /since Add 20 is used as a general code, subtract 40 from the original number if it is in lower case.
+                StoreI SwitchCaseAdd
+                Load SwitchCaseAdd
+                Add One
+                Store SwitchCaseAdd
+                JumpI subChangecase
+
+End,	Load Endsign
+		Output  /prints out the '$' sign and ends the program
+		Halt
+myNameAdd, Hex 300
+PrintNameAdd, Hex 300
+SwitchCaseAdd, Hex 300
+PrintNewNameAdd, Hex 300
+count, Dec 5
+One, Dec 1
+nextrow, Dec 5
+Five, Dec 5
+comma, Hex 2C
+fullstop, Hex 2E
+Endsign, Hex 24
+Spacebar, Hex 20              
+newline, Hex A
+casecheck, Hex 5A
+forty, Hex 40
+twenty, Hex 20
+

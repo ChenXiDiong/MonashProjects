@@ -1,0 +1,1 @@
+All Assessments are made to test my understanding on fundamental Java programming, as well as the basics of Object-Oriented Programming.
