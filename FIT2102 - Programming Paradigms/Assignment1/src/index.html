@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <title>FIT2102 A1 2022</title>
+    <style>
+      .goal1{
+        fill:aqua;
+      }
+      .goal2{
+        fill:aqua;
+      }
+      .goal3{
+        fill:aqua;
+      }
+      .goal4{
+        fill:aqua;
+      }
+      .goal5{
+        fill:aqua;
+      }
+      .frog {
+        fill:green;
+      }
+      .femalefrog{
+        fill:crimson;
+      }
+      .safezone1{
+        fill:purple;
+      }
+      .safezone2{
+        fill:purple;
+      }
+      .car1{
+        fill:yellow;
+      }
+      .car2{
+        fill:orange;
+      }
+      .car3{
+        fill:pink;
+      }
+      .racecar{
+        fill:bisque;
+      }
+      .truck{
+        fill:white;
+      }
+      .turtle1{
+        fill:aquamarine;
+      }
+      .log1{
+        fill:brown;
+      }
+      .log2{
+        fill:brown;
+      }
+      .turtle2{
+        fill:aquamarine;
+      }
+      .log3{
+        fill:brown;
+      }
+      .crocodile{
+        fill:burlywood;
+      }
+      .gameover {
+      font-family:sans-serif;
+      font-size:80px;
+      fill:red;
+      }
+      .gameclear {
+      font-family:sans-serif;
+      font-size:80px;
+      fill:greenyellow;
+      }
+      .restart {
+        font-family:sans-serif;
+        font-size:20px;
+        fill:deeppink ;
+      }
+      .messagebackground {
+        fill: black;  
+      }
+      .key {
+      width:18px;
+      text-align:center;
+      border-radius:3px;
+      background-color:lightgray;
+      }
+      .highlight {
+        background-color:darkcyan;
+      } 
+      .controls {
+        position: relative;
+        top: -620px;
+        left: 700px;
+      }
+      .score{
+        font-family:sans-serif;
+        font-size:30px;
+        fill:white;
+      }
+      .res{
+        font-family:sans-serif;
+        font-size:30px;
+        fill:red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Frogger</h1>
+    
+    <svg id="svgCanvas" width="600" height="600">
+      <g id="backgroundLayer">
+        <rect id="safezone1" class="safezone1" x="0" y="575" width="600" height="25">
+        </rect>
+        <rect id="safezone2" class="safezone2" x="0" y="395" width="600" height="25">
+        </rect>
+        <rect id="goal1" class="goal1" x="90" y="215" width="25" height="25">
+        </rect>
+        <rect id="goal2" class="goal2" x="190" y="215" width="25" height="25">
+        </rect>
+        <rect id="goal3" class="goal3" x="290" y="215" width="25" height="25">
+        </rect>
+        <rect id="goal4" class="goal4" x="390" y="215" width="25" height="25">
+        </rect>
+        <rect id="goal5" class="goal5" x="490" y="215" width="25" height="25">
+        </rect>
+      </g>
+      <g id="foregroundLayer">
+        <rect id="frog" class="frog" x="300" y="575" width="25" height="25">
+        </rect>
+        <rect id="femalefrog" class="femalefrog" x="200" y="575" width="25" height="25">
+        </rect>
+        <text id="score" class="score" x="100" y="30">SCORE</text>>
+        <text id="res" class="res" x="100" y="60">0</text>>
+        <text id="hiscore" class="score" x="300" y="30">HI-SCORE</text>>
+        <text id="res2" class="res" x="300" y="60">0</text>>
+        <text id="oneup" class="score" x="100" y="90">1-UP</text>>
+        <rect id="life1" class="frog" x="300" y="70" width="25" height="25">
+        </rect>
+        <rect id="life2" class="frog" x="350" y="70" width="25" height="25">
+        </rect>
+        <rect id="life3" class="frog" x="400" y="70" width="25" height="25">
+        </rect>
+        <rect id="life4" class="frog" x="450" y="70" width="25" height="25">
+        </rect>
+        <rect id="life5" class="frog" x="500" y="70" width="25" height="25">
+        </rect>
+      </g>
+    </svg>
+    <div class="controls">
+      <h2>Controls:</h2>
+      <table>
+          <tr><td>Move Up</td><td><div id="w" class="key">&#87;</div></td></tr>
+          <tr><td>Move Down</td><td><div id="s" class="key">&#83;</div></td></tr>
+          <tr><td>Move Left</td><td><div id="a" class="key">&#65;</div></td></tr>
+          <tr><td>Move Right</td><td><div id="d" class="key">&#68;</div></td></tr>
+          <tr><td>Restart</td><td><div id="r" class="key">&#82;</div></td></tr>
+      </table>
+      <h2>Difficulty:</h2>
+      <text id="level">Level: 1</text>
+      <h2>Instructions: </h2>
+      <text>Place frogger into all 5 designated locations on top of the map to win! Total levels = 2</text>
+      <h2>Score calculation:</h2>
+      <text>Goal = 500 points
+        <br>Move upwards = 10 points
+        <br>Goal with female frog = Extra 200 points</text>
+    </div>
+
+  </body>
+</html>
