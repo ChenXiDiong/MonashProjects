@@ -1,0 +1,40 @@
+1. Is k user defined just like m and n, or can it be coded with a value?
+A: both are ok.
+
+2. Should a charging station report to the base station when it is occupied, or when all of its neighbours are also occupied?
+A: Only when all neighbours are occupied, we are trying to minimize communication between the base station and charging stations.
+
+3. Can I implement test.c for the "graceful termination"?
+A: Yes, that is the better way.
+
+4. Apart from the base station, can I / do I need a separate thread to manage MPI messages for the other charging stations as well?
+A: It's not a must, but it's ok to do so.
+
+5. Can the termination condition of the base station be anything at all? (e.g. runtime, number of reports received, etc.)
+A: The best way is to specify a definite condition, e.g. number of iterations, user interrupt, etc. Because at the end of the day, we are trying to simulate a real world condition. Imagine that we are to shut the program down for maintenance.
+(wait for marking rubric)
+
+6. Would using Irecv be better for the base station to better keep track of the runtime (say it's the termination condition)?
+A: It's up to the user design.
+
+7. Can I pair MPI_Send with MPI_Irecv and vice versa?
+A: Yes.
+
+8. Assignment spec Part A 1a: What is the threshold specified by the user used for? It is not stated in the description document.
+A: Something similar to threshold for k, full threshold, interval for updates, etc.
+
+9. Assignment spec Part A 1b: Does the charging port availability simultation need to be a fixed period? Or is random time (seeded) acceptable?
+A: Both are ok.
+
+10. Assignment spec Part A 1e: Does the node need to also notify the base station about who its neighbours are?
+A: It's best to do so.
+
+11. Assignment spec Part B 1b: Is it fine for the base station thread to be ALWAYS listening instead of periodically (just like the lab)?
+A: Yes.
+
+12. Assignment spec Part B 1f: Can the base station (not the messenger thread) send MPI messages (e.g. termination message) as well, or must it only be sent by the messenger?
+A: It's fine.
+
+13. Assignment spec Part B 2a: minimum 2 runs with different scenarios. For my implementation (random start/stop charging times), can I just change the random seed value, or is there anything specific the teaching team is looking for in the different scenarios?
+A: It's just to prevent the case where students hardcode the log file. The program needs to be able to respond to different scenarios.
+

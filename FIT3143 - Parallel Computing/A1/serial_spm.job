@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH --job-name=omp_job	 ### name your job 
+#SBATCH --time=00:30:00		 ### hh:mm:ss or dd-hh:mm:ss
+#SBATCH --mem=16G				 ### memory setting is max @ 2 GB per core
+#SBATCH --ntasks=1				 ### launch one process
+#SBATCH --output=serial.%j.out
+#SBATCH --partition=defq
+
+if [ ! -f spm ]
+then
+ gcc string_pattern_match.c -fopenmp -o spm
+else
+ if [ string_pattern_match.c -nt spm ]
+ then
+  gcc string_pattern_match.c -fopenmp -o spm
+ fi
+fi
+
+./spm MOBY_DICK.txt output_M.txt 215724
+./spm LITTLE_WOMEN_MOBY_DICK.txt output_L.txt 411191
+./spm SHAKRESPEARE.txt output_S.txt 965465
+
+exit 0

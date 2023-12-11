@@ -1,0 +1,282 @@
+Base Station's Log File
+------------------------------------------------------------------------------------
+Full Report 1
+Time is 0:10:0
+Received report from heavily-in-use station 2 at (1,0), current availability is 0 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 14700.00
+Number of messages exchanged: 5
+------------------------------------------------------------------------------------
+Full Report 2
+Time is 0:10:0
+Received report from heavily-in-use station 3 at (1,1), current availability is 0 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 46501.00
+Number of messages exchanged: 5
+------------------------------------------------------------------------------------
+Full Report 3
+Time is 0:10:0
+Received report from heavily-in-use station 1 at (0,1), current availability is 0 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 5600.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Full Report 4
+Time is 0:10:0
+Received report from heavily-in-use station 0 at (0,0), current availability is 0 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 4500.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Free Report 1
+Time is 1:40:0
+Received report from free station 1 at (0,1), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Free Report 2
+Time is 1:40:0
+Received report from free station 0 at (0,0), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Full Report 5
+Time is 1:50:0
+Received report from heavily-in-use station 0 at (0,0), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+Station 1 at (0,1)
+Station 2 at (1,0)
+
+Communication Time (nanoseconds): 546201.00
+Number of messages exchanged: 5
+------------------------------------------------------------------------------------
+Free Report 3
+Time is 2:0:0
+Received report from free station 0 at (0,0), current availability is 3 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Full Report 6
+Time is 2:50:0
+Received report from heavily-in-use station 1 at (0,1), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 2800.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Free Report 4
+Time is 3:0:0
+Received report from free station 2 at (1,0), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Free Report 5
+Time is 3:0:0
+Received report from free station 1 at (0,1), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Full Report 7
+Time is 3:20:0
+Received report from heavily-in-use station 1 at (0,1), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 4900.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Full Report 8
+Time is 4:20:0
+Received report from heavily-in-use station 2 at (1,0), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 4800.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Full Report 9
+Time is 4:20:0
+Received report from heavily-in-use station 0 at (0,0), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 4000.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Free Report 6
+Time is 6:30:0
+Received report from free station 0 at (0,0), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Full Report 10
+Time is 6:40:0
+Received report from heavily-in-use station 0 at (0,0), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 92001.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Free Report 7
+Time is 7:50:0
+Received report from free station 3 at (1,1), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Free Report 8
+Time is 9:0:0
+Received report from free station 2 at (1,0), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Full Report 11
+Time is 9:10:0
+Received report from heavily-in-use station 3 at (1,1), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+Station 1 at (0,1)
+Station 2 at (1,0)
+
+Communication Time (nanoseconds): 22000.00
+Number of messages exchanged: 5
+------------------------------------------------------------------------------------
+Full Report 12
+Time is 11:0:0
+Received report from heavily-in-use station 2 at (1,0), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 3300.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Free Report 9
+Time is 11:10:0
+Received report from free station 2 at (1,0), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Full Report 13
+Time is 11:20:0
+Received report from heavily-in-use station 2 at (1,0), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 3600.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Free Report 10
+Time is 12:0:0
+Received report from free station 0 at (0,0), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Free Report 11
+Time is 12:50:0
+Received report from free station 1 at (0,1), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Full Report 14
+Time is 13:50:0
+Received report from heavily-in-use station 1 at (0,1), current availability is 0 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 3700.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Full Report 15
+Time is 14:0:0
+Received report from heavily-in-use station 0 at (0,0), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 3600.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Free Report 12
+Time is 15:50:0
+Received report from free station 3 at (1,1), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Free Report 13
+Time is 16:20:0
+Received report from free station 2 at (1,0), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Full Report 16
+Time is 16:30:0
+Received report from heavily-in-use station 3 at (1,1), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 15200.00
+Number of messages exchanged: 5
+------------------------------------------------------------------------------------
+Free Report 14
+Time is 17:0:0
+Received report from free station 1 at (0,1), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Full Report 17
+Time is 17:10:0
+Received report from heavily-in-use station 1 at (0,1), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 24100.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Free Report 15
+Time is 17:20:0
+Received report from free station 1 at (0,1), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Free Report 16
+Time is 17:50:0
+Received report from free station 0 at (0,0), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Full Report 18
+Time is 18:10:0
+Received report from heavily-in-use station 1 at (0,1), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 3900.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Full Report 19
+Time is 19:0:0
+Received report from heavily-in-use station 2 at (1,0), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 4100.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Full Report 20
+Time is 19:0:0
+Received report from heavily-in-use station 0 at (0,0), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 3600.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Free Report 17
+Time is 19:50:0
+Received report from free station 3 at (1,1), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Free Report 18
+Time is 20:20:0
+Received report from free station 0 at (0,0), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Full Report 21
+Time is 20:40:0
+Received report from heavily-in-use station 0 at (0,0), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 2600.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Full Report 22
+Time is 20:40:0
+Received report from heavily-in-use station 3 at (1,1), current availability is 1 port(s)
+Sent available neighbouring stations nearby: 
+None
+Communication Time (nanoseconds): 3400.00
+Number of messages exchanged: 3
+------------------------------------------------------------------------------------
+Free Report 19
+Time is 23:40:0
+Received report from free station 0 at (0,0), current availability is 2 port(s)
+Number of messages exchanged: 1
+------------------------------------------------------------------------------------
+Base Station has shut down
+Total Full Reports (Alerts) Received: 22
+Total Free Reports Received: 19
+Total Messages Exchanged: 95
+Total Communication Time (nanoseconds): 819103.00

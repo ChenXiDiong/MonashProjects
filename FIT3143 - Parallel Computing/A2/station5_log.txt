@@ -1,0 +1,187 @@
+Station 5's Log File
+|  Hour  | Minute | Second | Availability |
+|       0|      10|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 0:10:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       0|      20|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 0:20:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       0|      30|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 0:30:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       0|      40|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 0:40:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       0|      50|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 0:50:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       1|       0|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 1:0:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       1|      10|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 1:10:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       1|      20|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 1:20:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       1|      30|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 1:30:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       1|      40|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 1:40:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       1|      50|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 1:50:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       2|       0|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 2:0:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       2|      10|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 2:10:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       2|      20|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 2:20:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       2|      30|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 2:30:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       2|      40|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 2:40:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       2|      50|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 2:50:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       3|       0|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 3:0:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       3|      10|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 3:10:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       3|      20|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 3:20:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       3|      30|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 3:30:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       3|      40|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 3:40:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       3|      50|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 3:50:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       4|       0|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 4:0:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       4|      10|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 4:10:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       4|      20|       0|             1|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 4:20:0, current availability is 1 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       4|      30|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 4:30:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       4|      40|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 4:40:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       4|      50|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 4:50:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+|       5|       0|       0|             0|
+-------------------------------------------------------------------------
+Station 5 is heavily in use at 5:0:0, current availability is 0 port(s)
+Available neighbouring stations: None
+Nearest available stations from base: None
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Station has shut down
+Total number of requests sent: 1
+Total communication time with base(nanoseconds): 60623619.00
+Total communication time with other stations(nanoseconds): 1199299.00

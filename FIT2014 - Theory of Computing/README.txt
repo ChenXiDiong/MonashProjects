@@ -1,0 +1,3 @@
+In Assignment 1, we are tested in our understanding of logical statements, predicates, and mathematical induction.
+
+In Assignment 2, we are tested in our understanding of lexical analysers and parsers. We are also required to create our own Turing Machine that computes the simplified form of quantum computing expressions. We were also tested on Context-Free Languages (CFLs) by coming up with a proof by contradiction using the pumping lemma for CFLs.

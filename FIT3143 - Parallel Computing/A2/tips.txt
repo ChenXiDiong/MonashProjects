@@ -1,0 +1,8 @@
+Use srun instead of mpirun on CAAS
+
+
+Methodology:
+1. Mention that a "Free Report" will be sent to base station to update availability.
+
+	
+	

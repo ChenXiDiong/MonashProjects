@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --job-name=sim2_job	 ### name your job 
+#SBATCH --time=00:10:00		 ### hh:mm:ss or dd-hh:mm:ss
+#SBATCH --mem=16G				 ### memory setting is max @ 2 GB per core
+#SBATCH --nodes 4
+#SBATCH --ntasks=11				 ### launch eleven processes
+#SBATCH --cpus-per-task=5		 ### multi-threaded processes
+#SBATCH --ntasks-per-node=3   ### 3 mpi processes per node
+#SBATCH --output=sim2.%j.out
+#SBATCH --partition=defq
+
+if [ ! -f wsn ]
+then
+ make ALL
+else
+ if [ wsn.c -nt wsn ]
+ then
+  make ALL
+ fi
+fi
+
+make runcaas2
+
+exit 0

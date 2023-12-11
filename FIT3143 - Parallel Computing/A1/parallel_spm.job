@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --job-name=parallel_spm_job	 ### name your job 
+#SBATCH --time=00:30:00		 ### hh:mm:ss or dd-hh:mm:ss
+#SBATCH --mem=16G				 ### memory setting is max @ 2 GB per core
+#SBATCH --ntasks=1				 ### launch one process
+#SBATCH --cpus-per-task=8		 ### multi-threaded processes
+#SBATCH --output=parallel.%j.out
+#SBATCH --partition=defq
+
+if [ ! -f pspm ]
+then
+ gcc parallel_string_pattern_match.c -fopenmp -o pspm
+else
+ if [ parallel_string_pattern_match.c -nt pspm ]
+ then
+  gcc parallel_string_pattern_match.c -fopenmp -o pspm
+ fi
+fi
+
+export OMP_NUM_THREADS=4 && ./pspm
+export OMP_NUM_THREADS=8 && ./pspm
+export OMP_NUM_THREADS=16 && ./pspm
+
+exit 0
